@@ -1,0 +1,21 @@
+// UserDefinedEnum OceanShaderEnum.OceanShaderEnum
+enum class OceanShaderEnum : uint8 {
+	NewEnumerator0,
+	NewEnumerator1,
+	NewEnumerator2,
+	NewEnumerator3,
+	NewEnumerator8,
+	NewEnumerator6,
+	NewEnumerator7,
+	NewEnumerator4,
+	NewEnumerator5,
+	NewEnumerator9,
+	NewEnumerator10,
+	NewEnumerator11,
+	NewEnumerator12,
+	NewEnumerator13,
+	NewEnumerator14,
+	NewEnumerator15,
+	OceanShaderEnum_MAX,
+};
+

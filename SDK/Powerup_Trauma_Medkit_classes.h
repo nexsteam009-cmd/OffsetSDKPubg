@@ -1,0 +1,7 @@
+// BlueprintGeneratedClass Powerup_Trauma_Medkit.Powerup_Trauma_Medkit_C
+// Size: 0x4b8 (Inherited: 0x4b8)  [layout: KHOP]
+struct APowerup_Trauma_Medkit_C : ATslPowerupItem {
+
+	void UserConstructionScript(); // Function Powerup_Trauma_Medkit.Powerup_Trauma_Medkit_C.UserConstructionScript //  // @ game+0x43bab4
+};
+

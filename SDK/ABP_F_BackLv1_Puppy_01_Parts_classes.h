@@ -1,0 +1,22 @@
+// AnimBlueprintGeneratedClass ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C
+// Size: 0x1680 (Inherited: 0x3b0)  [layout: KHOP]
+struct UABP_F_BackLv1_Puppy_01_Parts_C : U*bdfb3da227 {
+	struct F*467c63d8f7 UberGraphFrame; // 0x3b0(0x10)
+	struct FAnimNode_Root _5b41b6d333_E48D5C6B449D42D6A3B80DB08E9FC879; // 0x3c0(0x50)
+	struct FAnimNode_RefPose _38c4d66547_294291CA4D522A661B673A801D60115F; // 0x410(0x38)
+	struct FAnimNode_ConvertLocalToComponentSpace _0784c3f024_98E6EA3D4BECA54F4CBB0A92E5A09950; // 0x448(0x48)
+	struct FAnimNode_ConvertComponentToLocalSpace _a53d403976_496F948243F3069B422C31B0D38C0BC7; // 0x490(0x48)
+	struct FAnimNode_AnimDynamics _461f86acf4_7F9B0E1641B954FBCB805694229400F2; // 0x4d8(0x388)
+	struct FAnimNode_AnimDynamics _461f86acf4_473A5A1A48F25A1D77D6DFBB262B3823; // 0x860(0x388)
+	struct FAnimNode_AnimDynamics _461f86acf4_F5F402DB4FE88B696A5770A5922D6154; // 0xbe8(0x388)
+	struct FAnimNode_AnimDynamics _461f86acf4_FAC8B75049C2F1E801CACEA9B876E195; // 0xf70(0x388)
+	struct FAnimNode_AnimDynamics _461f86acf4_8861B97044993572017B29835227D4B5; // 0x12f8(0x388)
+
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_FAC8B75049C2F1E801CACEA9B876E195(); // Function ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_FAC8B75049C2F1E801CACEA9B876E195 //  // @ game+0x43bab4
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_8861B97044993572017B29835227D4B5(); // Function ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_8861B97044993572017B29835227D4B5 //  // @ game+0x43bab4
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_F5F402DB4FE88B696A5770A5922D6154(); // Function ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_F5F402DB4FE88B696A5770A5922D6154 //  // @ game+0x43bab4
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_473A5A1A48F25A1D77D6DFBB262B3823(); // Function ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_473A5A1A48F25A1D77D6DFBB262B3823 //  // @ game+0x43bab4
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_7F9B0E1641B954FBCB805694229400F2(); // Function ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts_*461f86acf4_7F9B0E1641B954FBCB805694229400F2 //  // @ game+0x43bab4
+	void ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts(int32 EntryPoint); // Function ABP_F_BackLv1_Puppy_01_Parts.ABP_F_BackLv1_Puppy_01_Parts_C.ExecuteUbergraph_ABP_F_BackLv1_Puppy_01_Parts //  // @ game+0x43bab4
+};
+

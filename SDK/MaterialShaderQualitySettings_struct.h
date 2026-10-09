@@ -1,0 +1,19 @@
+// Enum MaterialShaderQualitySettings.EMobileCSMQuality
+enum class EMobileCSMQuality : uint8 {
+	NoFiltering,
+	PCF_1x1,
+	PCF_2x2,
+	EMobileCSMQuality_MAX,
+};
+
+// ScriptStruct MaterialShaderQualitySettings.MaterialQualityOverrides
+// Size: 0x06 (Inherited: 0x00)  [layout: KHOP]
+struct FMaterialQualityOverrides {
+	bool bEnableOverride; // 0x00(0x01)
+	bool bForceFullyRough; // 0x01(0x01)
+	bool bForceNonMetal; // 0x02(0x01)
+	bool bForceDisableLMDirectionality; // 0x03(0x01)
+	bool bForceLQReflections; // 0x04(0x01)
+	enum class EMobileCSMQuality MobileCSMQuality; // 0x05(0x01)
+};
+

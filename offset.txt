@@ -1,0 +1,226 @@
+# TslGame 2609.1.3.1 - Dumper.exe sinh tu verify/offset_template.txt
+XenuineDecrypt = 0x10EC3828
+UWorld = 0x128271E8
+Physx_SDK = 0x123BE088
+GNames = 0x12ABD1B0   // do song: [base+RVA] -> Xe -> holder -> +GNamesPtr -> Xe -> bang chunk
+GNamesPtr = 0x10
+ChunkSize = 0x4164
+
+constexpr uint64_t DecryptNameIndexRor = 0x1;
+constexpr uint64_t DecryptNameIndexXorKey1 = 0x4CC9D1B1;
+constexpr uint64_t DecryptNameIndexXorKey2 = 0x58564FDF;
+constexpr uint64_t DecryptNameIndexXorKey3 = 0x0;
+constexpr uint64_t DecryptNameIndexRval = 0x7;
+constexpr uint64_t DecryptNameIndexSval = 0x0;
+constexpr uint64_t DecryptNameIndexDval = 0x9;
+constexpr uint64_t DecryptNameIndexShlMask = 0xFFFF0000;
+
+// XeDecryptCIndex: giai ma FName index (ObjID -> ID ten), ham game @RVA 0x3446A8
+uint32_t XeDecryptCIndex(uint32_t value)
+{
+    uint32_t xored = value ^ 0x4CC9D1B1;
+    return ((((xored << 9) & 0xFFFF0000))) ^ _rotr(xored, 7) ^ 0x58564FDF;
+}
+
+ObjID = 0x28
+
+GameInstance = 0x7F8
+LocalPlayer = 0x40
+Actors = 0xB0
+NumAliveTeams = 0x4E0
+ComponentToWorld = 0x320
+ComponentLocation = 0x330
+ComponentVelocity = 0x354
+TimeSeconds = 0x7A8   // do song Dumper.exe -v
+DeltaTimeSeconds = 0x8C0
+CurrentLevel = 0x8D0
+Mesh = 0x5B0
+Gender = 0xB40
+CharacterMovement = 0x598
+LastUpdateVelocity = 0x3E0
+RootComponent = 0x3E8
+PlayerController = 0x38
+PlayerInput = 0x548
+InputYawScale = 0x64C
+bShowMouseCursor = 0x658
+AcknowledgedPawn = 0x4A8
+MyHUD = 0x4C8
+InputAxisProperties = 0x138
+GameState = 0x88
+bAlwaysCreatePhysicsState = 0x498   // sig offset_scanner (1 khop tren anh)
+MouseX = 0x5212
+MouseY = 0x5213
+WorldOrigin = 0x38
+WorldOriginLocation = 0x150   // do song: ReplicatedMovement.Location - ComponentLocation, khop int32 x3 trong UWorld
+
+SafetyZoneRadius = 0xBC
+SafetyZonePosition = 0xB0
+BlueZoneRadius = 0xCC
+BlueZonePosition = 0xC0
+
+PlayerArray = 0x418
+PlayerCameraManager = 0x4D0
+ViewTarget = 0x1090
+CameraCacheFOV = 0x10C0
+CameraCacheRotation = 0x10B4
+CameraCacheLocation = 0x10C4
+
+GroggyHealth = 0x18C0
+CharacterName = 0x16E0
+LastTeamNum = 0x1E10
+SpectatedCount = 0x16C4
+PlayerState = 0x428
+CharacterState = 0x114C
+AnimScriptInstance = 0xE30
+SubInstances = 0xE38
+PreEvalPawnState = 0x658
+StaticMesh = 0xAE8
+LastSubmitTime = 0x758
+Eyes = 0x760   // do song Dumper.exe -v
+AimOffsets = 0x1BD0
+PlayerStatistics = 0xAB4
+DamageDealtOnEnemy = 0xAE4
+PartnerLevel = 0x630
+TeamNumber = 0xB80
+PlayerName = 0x420
+PlayerStatusType = 0x470
+SquadMemberIndex = 0xBA8
+AccountId = 0xB70
+SurvivalTier = 0xE58
+SurvivalLevel = 0xE5C
+PubgIdData = 0xE38
+CharacterClanInfo = 0xB08
+ReplicatedMovement = 0x80
+
+VehicleRiderComponent = 0x21B0
+SeatIndex = 0x238
+LastVehiclePawn = 0x270
+VehicleMovement = 0x470
+Wheels = 0x330
+WheelLocation = 0x100
+DampingRate = 0x54
+ShapeRadius = 0x48
+VehicleFuel = 0x2F8
+VehicleCommonComponent = 0xB30
+FloatingComponent = 0x4E0
+VehicleFuelMax = 0x2FC
+VehicleHealth = 0x2F0
+VehicleHealthMax = 0x2F4
+
+WidgetStateMap = 0x550
+TrainingMapGrid = 0x608
+MapGrid_Map = 0x4B0
+LayoutData = 0x40
+Visibility = 0xA9
+Slot = 0x38
+Offsets = 0x0
+Alignment = 0x20
+BlockInputWidgetList = 0x5C8
+SelectMinimapSizeIndex = 0x550   // doc tu ham game MinimapCanvasWidget.OnPrev/OnResetMinimapSize
+
+InventoryFacade = 0x1290
+Inventory = 0x408
+InventoryItems = 0x600
+InventoryItemCount = 0x608   // sig offset_scanner (1 khop tren anh)
+InventoryItemTagItemCount = 0x40
+ItemID = 0x274
+ItemTable = 0xB0
+ItemPackageItems = 0x580
+DroppedItemGroup = 0x370   // sig offset_scanner (1 khop tren anh)
+DroppedItem = 0x470
+DroppedItemGroupUItem = 0x888
+TimeTillExplosion = 0x834
+ExplodeState = 0x648
+
+WeaponProcessor = 0x958
+CurrentAmmoData = 0xF18
+CurrentWeaponIndex = 0x319
+EquippedWeapons = 0x210
+WeaponTrajectoryData = 0x1220
+TrajectoryGravityZ = 0x11C8
+RecoilValueVector = 0x11B0   // sig offset_scanner (1 khop tren anh)
+VerticalRecovery = 0x11B8   // sig offset_scanner (1 khop tren anh)
+TrajectoryConfig = 0x108
+BallisticCurve = 0x28
+FloatCurves = 0x38
+Keys = 0x60
+WeaponConfig_WeaponClass = 0x74C
+Mesh3P = 0x810
+FiringAttachPoint = 0x8D0
+AttachedStaticComponentMap = 0x1508   // neo *1ffb0fd0f7+0x58 theo bang .83, chua do song
+AttachedItems = 0x868
+WeaponAttachmentData = 0x290
+ScopingAttachPoint = 0xED8
+ElapsedCookingTime = 0xB98
+
+ControlRotation_CP = 0x674
+RecoilADSRotation_CP = 0x824
+LeanLeftAlpha_CP = 0x6BC
+LeanRightAlpha_CP = 0x6C0
+bIsScoping_CP = 0x865
+bIsReloading_CP = 0x75D
+
+StaticSockets = 0xC8
+StaticSocketName = 0x30
+StaticRelativeLocation = 0x38
+StaticRelativeRotation = 0x44
+StaticRelativeScale = 0x50
+
+AntiCheatCharacterSyncManager = 0x11F8   // sig offset_scanner (1 khop tren anh)
+
+HeaFlag = 0x110
+Health1 = 0x9A0   // sig offset_scanner (1 khop tren anh)
+Health2 = 0x980   // sig offset_scanner (1 khop tren anh)
+Health3 = 0x974
+Health4 = 0x960
+Health5 = 0x975
+Health6 = 0x970
+HealthBlock = 0x960   // khoi 0x18 mau phia client (XOR 16 Health_keys) - doc mau o day
+HealthBlockKeyIndex = 0x970
+HealthBlockIndex = 0x974
+bHealthBlockEncrypted = 0x975
+DBNOHealthBlock = 0x35A0   // khoi 0x18 mau phia client (XOR 16 Health_keys) - doc mau o day
+DBNOHealthBlockKeyIndex = 0x35B0
+DBNOHealthBlockIndex = 0x35B4
+bDBNOHealthBlockEncrypted = 0x35B5
+EncryptedHealth = 0x3590   // uint64 replicate (ten goc theo OnRep_EncryptedHealth), tren client do song luon 0 -> KHONG doc mau o day, doc HealthBlock
+EncryptedDBNOHealth = 0x35C0   // uint64 replicate (ten goc theo OnRep_EncryptedDBNOHealth), tren client do song luon 0 -> KHONG doc mau o day, doc DBNOHealthBlock
+Health_keys0 = 0xCEC7A58E
+Health_keys1 = 0x9B63B202
+Health_keys2 = 0xCAC166A5
+Health_keys3 = 0x2384859
+Health_keys4 = 0xDE911D0A
+Health_keys5 = 0x23DDBC20
+Health_keys6 = 0x94559C8
+Health_keys7 = 0xA521A721
+Health_keys8 = 0xBBC7A58
+Health_keys9 = 0xB0EF0287
+Health_keys10 = 0xE27517A7
+Health_keys11 = 0x878ADBC2
+Health_keys12 = 0xBDDEC7D5
+Health_keys13 = 0x2935907
+Health_keys14 = 0x59099E38
+Health_keys15 = 0xF3C62AD8
+FiringModeIndex = 0xF88
+FireModes = 0xE00
+PlayerStateKilled = 0xAD8
+bIsDBNO_CP = 0x8F2
+bIsDBNO1 = 0x3588
+bIsDBNO2 = 0x3589
+bIsDBNO0 = 0x358A
+
+MortarElevation = 0x528   // float native sau con tro SpringArm (luat tu bang .83), chua do song
+MortarYaw = 0x52C   // float native sau con tro SpringArm (luat tu bang .83), chua do song
+MortarShellMovement = 0x458
+ProjectileInitialSpeed = 0x250
+ProjectileGravityScale = 0x26C
+ProjectileVelocity = 0x21C
+
+
+LastTakeHitInfo = 0x1A50
+Equipment = 0x410
+EquipmentItems = 0x578
+Durability = 0x1E4
+StackCount = 0x40
+
+#
